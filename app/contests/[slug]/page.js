@@ -1,9 +1,13 @@
+import AnimatedTabs from '../../components/AnimatedTabs';
+
 export default function Page({ params }) {
   // get contest data
 
 
   return (
-    <div className="flex flex-col gap-y-10 w-full">
+    <div className="flex flex-col gap-y-10 w-full items-center">
+      <AnimatedTabs />
+
       <div className="flex gap-x-20 border-b border-gray-300 mx-20">
         <div className="relative w-full h-96">
           <label htmlFor="goals" className="flex justify-center cursor-pointer p-3 hover:bg-gray-200">Goals</label>
