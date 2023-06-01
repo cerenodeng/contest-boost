@@ -13,8 +13,8 @@ export default function AnimatedTabs() {
   let [activeTab, setActiveTab] = useState(tabs[0].id);
 
   return (
-    <div className="flex flex-col gap-y-5">
-      <div className="flex gap-x-10">
+    <div className="flex flex-col gap-y-5 w-full">
+      <div className="flex gap-x-10 justify-center">
         {tabs.map((tab) => (
           <button
             key={tab.id}
@@ -37,11 +37,13 @@ export default function AnimatedTabs() {
         ))}
       </div>
 
-      {tabs.map((tab) => (
-        <div key={tab.id} className={`${activeTab === tab.id ? "" : "hidden"}`}>
-          {tab.content}
-        </div>
-      ))}
+      <div className="p-10">
+        {tabs.map((tab) => (
+          <div key={tab.id} className={`${activeTab === tab.id ? "" : "hidden"}`}>
+            {tab.content}
+          </div>
+        ))}
+      </div>
     </div>
 
   );
