@@ -1,4 +1,4 @@
-import AnimatedTabs from '../../components/AnimatedTabs';
+import AnimatedTabs from '@/components/AnimatedTabs';
 
 export default function Page({ params }) {
   // get contest data
