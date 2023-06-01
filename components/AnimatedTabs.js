@@ -3,13 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-let tabs = [
-  { id: "goals", label: "Goals", content: "The content of goals" },
-  { id: "rules", label: "Rules", content: "The content of rules" },
-  { id: "prizes", label: "Prizes", content: "The content of prizes" },
-];
-
-export default function AnimatedTabs() {
+export default function AnimatedTabs({ tabs }) {
   let [activeTab, setActiveTab] = useState(tabs[0].id);
 
   return (
