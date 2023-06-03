@@ -1,14 +1,16 @@
 import { prisma } from '@/database/init';
 import AnimatedTabs from '@/components/AnimatedTabs';
 
-export default async function Page({ params }) {
+export default async function ContestPage({ params }) {
   const navTabs = await prisma.navTab.findMany();
 
   return (
-    <div className="flex flex-col gap-y-10 w-full items-center">
-      <AnimatedTabs tabs={navTabs} />
+    <main className="flex p-20 h-screen justify-center">
+      <div className="flex flex-col gap-y-10 w-full items-center">
+        <AnimatedTabs tabs={navTabs} />
 
-      <hr />
-    </div >
+        <hr />
+      </div >
+    </main>
   );
 }
