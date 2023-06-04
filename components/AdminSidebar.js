@@ -3,7 +3,7 @@
 export default async function AdminSidebar() {
 
   return (
-    <aside className="flex flex-col bg-indigo-900 w-1/4 h-screen shadow-2xl shadow-indigo-500/50">
+    <aside className="flex flex-col bg-indigo-900 w-1/5 h-screen shadow-2xl shadow-indigo-500/50">
       <div className="text-gray-500 p-10">Contest Boost</div>
 
       <nav className="flex flex-col grow">

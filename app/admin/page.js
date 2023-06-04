@@ -1,10 +1,8 @@
-import AdminSidebar from "@/components/AdminSidebar";
-
 export default async function AdminPage() {
 
   return (
-    <div>
-      <AdminSidebar />
-    </div>
+    <main className="w-4/5">
+      main
+    </main>
   );
 }
