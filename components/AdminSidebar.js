@@ -1,20 +1,34 @@
-// 'use client';
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default async function AdminSidebar() {
+  const pathname = usePathname();
+  const navs = [
+    { id: 1, name: 'Contests', href: '/admin/contests' },
+    { id: 2, name: 'Pages', href: '/admin/pages' },
+    { id: 3, name: 'Users', href: '/admin/users' },
+  ];
 
   return (
-    <aside className="flex flex-col bg-indigo-900 w-1/5 h-screen shadow-2xl shadow-indigo-500/50">
-      <div className="text-gray-500 p-10">Contest Boost</div>
+    <aside className="flex flex-col bg-indigo-900 w-1/5 h-screen shadow-2xl shadow-indigo-900/50">
+      <Link href="/admin" className="text-gray-500 p-10">Contest Boost</Link>
 
-      <nav className="flex flex-col grow">
-        <a href="#" className="text-white font-semibold px-10 py-5 hover:text-indigo-900 hover:bg-white">Contests</a>
-        <a href="#" className="text-white font-semibold px-10 py-5 hover:text-indigo-900 hover:bg-white">Pages</a>
-        <a href="#" className="text-white font-semibold px-10 py-5 hover:text-indigo-900 hover:bg-white">Users</a>
+      <nav className="flex flex-col grow gap-y-px">
+        {navs.map((data) => (
+          <Link
+            key={data.id}
+            href={data.href}
+            className={`${pathname == data.href ? "text-indigo-900 bg-white" : "text-white bg-indigo-900 hover:text-indigo-900 hover:bg-white"} font-semibold px-10 py-5`}>
+            {data.name}
+          </Link>
+        ))}
       </nav>
 
       <a href="#" className="text-gray-100 font-semibold px-10 py-5 hover:text-indigo-900 hover:bg-white">
         Me
       </a>
-    </aside>
+    </aside >
   );
 }
