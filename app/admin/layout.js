@@ -4,7 +4,7 @@ import AdminMain from "@/components/AdminMain";
 export default async function AdminLayout({ children }) {
 
   return (
-    <div class="flex">
+    <div className="flex">
       <AdminSidebar />
       <AdminMain>
         {children}
