@@ -1,8 +1,14 @@
-export default async function AdminHeader({ title }) {
+'use client';
+
+import { usePathname } from 'next/navigation';
+
+export default async function AdminHeader() {
+  const pathname = usePathname();
+  const title = pathname.split('/').at(-1);
 
   return (
     <div className="flex justify-between">
-      <h1 className="text-3xl font-bold">{title}</h1>
+      <h1 className="text-3xl font-bold">{title[0].toUpperCase() + title.slice(1)}</h1>
 
       <div className="flex gap-x-5">
         <button type="button" className="flex gap-x-1 text-white bg-indigo-900 px-6 py-3 items-center border-2 border-transparent rounded hover:text-indigo-900 hover:bg-white hover:border-2 hover:border-indigo-900">
