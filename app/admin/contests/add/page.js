@@ -1,3 +1,14 @@
+async function Save(data) {
+  'use server';
+
+  const title = data.get("title");
+  const startDatetime = data.get("startDatetime");
+  const endDatetime = data.get("endDatetime");
+  const goals = data.get("goals");
+
+  console.log(title, startDatetime, endDatetime, goals);
+}
+
 export default async function ContestsAdd() {
 
   return (
@@ -10,16 +21,16 @@ export default async function ContestsAdd() {
       </div>
 
       <div className="flex gap-x-10">
-        <label htmlFor="start-datetime" className="label">Start</label>
+        <label htmlFor="startDatetime" className="label">Start</label>
         <div className="w-4/5">
-          <input id="start-datetime" name="start-datetime" type="datetime-local" className="input" />
+          <input id="startDatetime" name="startDatetime" type="datetime-local" className="input" />
         </div>
       </div>
 
       <div className="flex gap-x-10">
-        <label htmlFor="end-datetime" className="label">End</label>
+        <label htmlFor="endDatetime" className="label">End</label>
         <div className="w-4/5">
-          <input id="end-datetime" name="end-datetime" type="datetime-local" className="input" />
+          <input id="endDatetime" name="endDatetime" type="datetime-local" className="input" />
         </div>
       </div>
 
@@ -31,7 +42,7 @@ export default async function ContestsAdd() {
       </div>
 
       <div className="flex gap-x-5 mt-10 justify-end">
-        <button type="button" className="button-primary">Save</button>
+        <button formAction={Save} className="button-primary">Save</button>
         <button type="button" className="button-primary">Publish</button>
       </div>
     </form>
