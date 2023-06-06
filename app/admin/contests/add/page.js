@@ -3,30 +3,30 @@ export default async function ContestsAdd() {
   return (
     <form className="flex flex-col">
       <div className="flex gap-x-10">
-        <label htmlFor="title" className="w-1/5 pb-10 border-r border-gray-200">Title</label>
+        <label htmlFor="title" className="label">Title</label>
         <div className="w-4/5">
-          <input id="title" name="title" type="text" className="w-full p-2 border border-indigo-900/50 focus:border-indigo-900" />
+          <input id="title" name="title" type="text" className="input" />
         </div>
       </div>
 
       <div className="flex gap-x-10">
-        <label htmlFor="start-datetime" className="w-1/5 pb-10 border-r border-gray-200">Start</label>
+        <label htmlFor="start-datetime" className="label">Start</label>
         <div className="w-4/5">
-          <input id="start-datetime" name="start-datetime" type="datetime-local" className="w-full p-2 border border-indigo-900/50 focus:border-indigo-900" />
+          <input id="start-datetime" name="start-datetime" type="datetime-local" className="input" />
         </div>
       </div>
 
       <div className="flex gap-x-10">
-        <label htmlFor="end-datetime" className="w-1/5 pb-10 border-r border-gray-200">End</label>
+        <label htmlFor="end-datetime" className="label">End</label>
         <div className="w-4/5">
-          <input id="end-datetime" name="end-datetime" type="datetime-local" className="w-full p-2 border border-indigo-900/50 focus:border-indigo-900" />
+          <input id="end-datetime" name="end-datetime" type="datetime-local" className="input" />
         </div>
       </div>
 
       <div className="flex gap-x-10">
-        <label htmlFor="goals" className="w-1/5 pb-10 border-r border-gray-200">Goals</label>
+        <label htmlFor="goals" className="label">Goals</label>
         <div className="w-4/5">
-          <textarea id="goals" name="goals" className="w-full p-2 border border-indigo-900/50 focus:border-indigo-900"></textarea>
+          <textarea id="goals" name="goals" className="input"></textarea>
         </div>
       </div>
 

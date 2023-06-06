@@ -5,3 +5,11 @@
 .button-primary {
 	@apply text-white bg-indigo-900 px-6 py-2.5 border-2 border-transparent rounded hover:text-indigo-900 hover:bg-white hover:border-2 hover:border-indigo-900;
 }
+
+.label {
+	@apply w-1/5 pt-2 pb-10 border-r border-gray-200;
+}
+
+.input {
+	@apply w-full p-2 border border-indigo-900/50 focus:border-indigo-900 focus:outline-none;
+}
