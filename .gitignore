@@ -38,5 +38,5 @@ next-env.d.ts
 .env
 
 # database
-/prisma/*.db
-/prisma/*.db-journal
+database/*.db
+database/*.db-journal
