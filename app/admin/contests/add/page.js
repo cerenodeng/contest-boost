@@ -1,12 +1,25 @@
+import { prisma } from '@/database/init';
+import { redirect } from 'next/navigation';
+
 async function Save(data) {
   'use server';
 
-  const title = data.get("title");
-  const startDatetime = data.get("startDatetime");
-  const endDatetime = data.get("endDatetime");
-  const goals = data.get("goals");
+  const title = data.get('title');
+  const startDatetime = data.get('startDatetime');
+  const endDatetime = data.get('endDatetime');
+  const goals = data.get('goals');
 
-  console.log(title, startDatetime, endDatetime, goals);
+  const contest = await prisma.contest.create({
+    data: {
+      title: title,
+      startDatetime: startDatetime,
+      endDatetime: endDatetime,
+      content: JSON.stringify({ goals: goals })
+    }
+  });
+
+  console.log(contest);
+  redirect('/admin/contests');
 }
 
 export default async function ContestsAdd() {
