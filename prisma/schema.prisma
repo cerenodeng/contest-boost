@@ -12,3 +12,11 @@ model NavTab {
   label   String
   content String
 }
+
+model Contest {
+  id            Int     @id @default(autoincrement())
+  title         String
+  startDatetime String
+  endDatetime   String
+  content       String
+}
