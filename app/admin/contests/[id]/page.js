@@ -59,7 +59,7 @@ export default async function Contest({ params }) {
       <div className="flex gap-x-10">
         <label htmlFor="goals" className="label">Goals</label>
         <div className="w-4/5">
-          <textarea id="goals" name="goals" className="input">{goals}</textarea>
+          <textarea id="goals" name="goals" className="input" defaultValue={goals}></textarea>
         </div>
       </div>
 
