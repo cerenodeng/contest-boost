@@ -14,3 +14,8 @@ model Contest {
   endDatetime   String
   content       String
 }
+
+model ContestContentType {
+  id            Int     @id @default(autoincrement())
+  title         String
+}
