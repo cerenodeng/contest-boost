@@ -7,9 +7,17 @@
 }
 
 .label {
-	@apply w-1/5 pt-2 pb-10 border-r border-gray-200;
+	@apply w-1/5 pt-2 pb-10 border-r border-gray-200 last:pb-0;
+}
+
+.label-no-pb {
+	@apply w-1/5 pt-2 border-r border-gray-200;
 }
 
 .input {
 	@apply w-full p-2 border border-indigo-900/50 focus:border-indigo-900 focus:outline-none;
+}
+
+.input-no-pb {
+	@apply w-full px-2 pt-2 border border-indigo-900/50 focus:border-indigo-900 focus:outline-none;
 }
