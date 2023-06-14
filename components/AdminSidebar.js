@@ -12,21 +12,21 @@ export default async function AdminSidebar() {
   ];
 
   return (
-    <aside className="flex flex-col bg-indigo-900 w-1/5 h-screen shadow-2xl shadow-indigo-900/50">
-      <Link href="/admin" className="text-gray-500 p-10">Contest Boost</Link>
+    <aside className="flex flex-col bg-indigo-900 w-72 h-screen shadow-2xl shadow-indigo-900/50">
+      <Link href="/admin" className="text-gray-500 px-8 py-10">Contest Boost</Link>
 
       <nav className="flex flex-col grow gap-y-px">
         {navs.map((data) => (
           <Link
             key={data.id}
             href={data.href}
-            className={`${pathname == data.href ? "text-indigo-900 bg-white" : "text-white bg-indigo-900 hover:text-indigo-900 hover:bg-white"} font-semibold px-10 py-5`}>
+            className={`${pathname == data.href ? "text-indigo-900 bg-white" : "text-white bg-indigo-900 hover:text-indigo-900 hover:bg-white"} font-semibold px-8 py-5`}>
             {data.name}
           </Link>
         ))}
       </nav>
 
-      <a href="#" className="text-gray-100 font-semibold px-10 py-5 hover:text-indigo-900 hover:bg-white">
+      <a href="#" className="text-gray-100 font-semibold px-8 py-5 hover:text-indigo-900 hover:bg-white">
         Me
       </a>
     </aside >
