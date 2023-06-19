@@ -1,20 +1,9 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
-
-export default async function AdminTable({ children }) {
-  const sidebarNavs = ['contests', 'pages', 'users'];
-  const pathname = usePathname();
-  const lastSegment = pathname.split('/').at(-1);
-
-  const searchClass = sidebarNavs.includes(lastSegment) ? '' : 'hidden';
+export default async function AdminTable({ data }) {
+  console.log('table!', data, '----')
 
   return (
-    <>
-      <div className={`w-1/5 ${searchClass}`}>
-        <input name="search" type="text" className="input" placeholder="Search..." onKeyUp={(event) => { onSearch(event.target.value) }} />
-      </div>
-      {children}
-    </>
+    <div>data={data}</div>
   )
 }
