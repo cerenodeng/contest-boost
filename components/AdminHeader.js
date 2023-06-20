@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export default async function AdminHeader() {
+export default function AdminHeader() {
   const pathname = usePathname();
   const lastSegment = pathname.split('/').at(-1);
 

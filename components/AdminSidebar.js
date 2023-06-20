@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export default async function AdminSidebar() {
+export default function AdminSidebar() {
   const pathname = usePathname();
   const navs = [
     { id: 1, name: 'Contests', href: '/admin/contests' },

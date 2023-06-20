@@ -1,7 +1,6 @@
 'use client';
 
-export default async function AdminTable({ data }) {
-  console.log('table!', data, '----')
+export default function AdminTable({ data }) {
 
   return (
     <div>data={data}</div>
