@@ -17,8 +17,8 @@ export default async function ContestsPage() {
       }
     });
 
-    console.log(data);
-    return data[0].title;
+    console.log('data', data);
+    return data;
   }
 
   return (

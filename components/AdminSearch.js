@@ -4,35 +4,33 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import AdminTable from './AdminTable';
 
-export default async function AdminSearch({ refreshContest }) {
+export default function AdminSearch({ refreshContest }) {
   const sidebarNavs = ['contests', 'pages', 'users'];
   const pathname = usePathname();
   const lastSegment = pathname.split('/').at(-1);
   const searchClass = sidebarNavs.includes(lastSegment) ? '' : 'hidden';
 
+  const [contests, setContests] = useState([]);
 
-  // let response = "";
-
-  // async function search(term) {
-  //   response = await refreshContest(term);
-  //   console.log(new Date(), response)
-  // }
-
-  const [count, setCount] = useState(0);
-
-  function handleClick() {
-    setCount(count + 1);
+  async function search(term) {
+    console.log(new Date(), contests);
+    const response = await refreshContest(term);
+    setContests(response);
+    console.log(new Date(), contests);
   }
 
   return (
-    <div className={`w-1/5 ${searchClass}`}>
-      {/* <input name="search" type="text" className="input" placeholder="Search..." onKeyUp={async (event) => { await search(event.target.value) }} /> */}
-      <button onClick={handleClick}>
-        You pressed me {count} times
-      </button>
-      {/* <div className='bg-gray-500 w-20 h-10'>{response}</div> */}
-
-      {/* <AdminTable data={response} /> */}
+    <div className="flex flex-col gap-y-5">
+      <div className="w-1/5">
+        <input
+          name="search"
+          type="text"
+          className={`input w-1/5 ${searchClass}`}
+          placeholder="Search..."
+          onKeyUp={async (event) => { await search(event.target.value) }}
+        />
+      </div>
+      <AdminTable contests={contests} />
     </div>
   )
 }
