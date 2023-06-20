@@ -17,3 +17,7 @@ npm run dev
 - Next.js
 - Prisma
 - SQLite
+
+### Next.js Bugs
+
+- (2023-06-20) If using `async` functions in client components, the React hooks like useState will make site keep freezing.
