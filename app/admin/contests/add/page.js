@@ -1,5 +1,6 @@
 import { prisma } from '@/database/init';
 import { redirect } from 'next/navigation';
+import { revalidatePath } from 'next/cache';
 
 async function Save(data) {
   'use server';
@@ -18,6 +19,7 @@ async function Save(data) {
     }
   });
 
+  revalidatePath('/admin/contests');
   redirect('/admin/contests');
 }
 
