@@ -17,13 +17,22 @@ export default async function ContestsPage() {
       }
     });
 
-    console.log('data', data);
+    return data;
+  }
+
+  async function deleteItem(id) {
+    'use server';
+
+    const data = await prisma.contest.delete({
+      where: { id: id },
+    });
+
     return data;
   }
 
   return (
     <>
-      <AdminSearch refreshContest={refreshContest} />
+      <AdminSearch refreshContest={refreshContest} deleteItem={deleteItem} />
 
       <div className="flex flex-col divide-y">
         <div className="flex py-5">

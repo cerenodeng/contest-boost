@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import AdminTable from './AdminTable';
 
-export default function AdminSearch({ refreshContest }) {
+export default function AdminSearch({ refreshContest, deleteItem }) {
   const sidebarNavs = ['contests', 'pages', 'users'];
   const pathname = usePathname();
   const lastSegment = pathname.split('/').at(-1);
@@ -13,10 +13,8 @@ export default function AdminSearch({ refreshContest }) {
   const [contests, setContests] = useState([]);
 
   async function search(term) {
-    console.log(new Date(), contests);
     const response = await refreshContest(term);
     setContests(response);
-    console.log(new Date(), contests);
   }
 
   return (
@@ -30,7 +28,7 @@ export default function AdminSearch({ refreshContest }) {
           onKeyUp={async (event) => { await search(event.target.value) }}
         />
       </div>
-      <AdminTable contests={contests} />
+      <AdminTable contests={contests} deleteItem={deleteItem} />
     </div>
   )
 }
