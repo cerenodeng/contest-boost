@@ -18,7 +18,6 @@ async function Save(data) {
     }
   });
 
-  console.log(contest);
   redirect('/admin/contests');
 }
 
