@@ -18,8 +18,6 @@ export default function AdminHeader() {
 
   if (lastSegment == "add") {
     title = `Add ${firstUpperCase(pathname.split('/').at(-2)).slice(0, -1)}`;
-  } else if (lastSegment == "settings") {
-    title = `${firstUpperCase(pathname.split('/').at(-2))} Settings`;
   } else if (parseInt(lastSegment) == lastSegment) {
     title = `${firstUpperCase(pathname.split('/').at(-2)).slice(0, -1)} Detail`;
   } else {

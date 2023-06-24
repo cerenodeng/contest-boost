@@ -1,7 +1,7 @@
 import { prisma } from '@/database/init';
 import AdminTable from '@/components/AdminTable';
 
-export default async function ContestsPage() {
+export default async function Submissions() {
   const contests = await prisma.contest.findMany();
 
   async function refreshContest(term) {

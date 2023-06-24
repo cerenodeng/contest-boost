@@ -12,11 +12,10 @@ async function Save(data) {
     }
   });
 
-  console.log(contestContentType);
   redirect('/admin/contests');
 }
 
-export default async function ContestsSettings() {
+export default async function Settings() {
 
   return (
     <form className="flex flex-col">

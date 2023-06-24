@@ -6,9 +6,10 @@ import { usePathname } from 'next/navigation';
 export default function AdminSidebar() {
   const pathname = usePathname();
   const navs = [
-    { id: 1, name: 'Contests', href: '/admin/contests' },
-    { id: 2, name: 'Pages', href: '/admin/pages' },
+    { id: 1, name: 'Contest', href: '/admin/contest' },
+    { id: 2, name: 'Submissions', href: '/admin/submissions' },
     { id: 3, name: 'Users', href: '/admin/users' },
+    { id: 3, name: 'Settings', href: '/admin/settings' },
   ];
 
   return (
