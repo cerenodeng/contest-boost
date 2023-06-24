@@ -2,6 +2,8 @@
 
 Contest Boost is an open source contest management system. I am builing this. Stay tuned.
 
+No AI. All code is developed by human.
+
 ### Getting Started
 
 Run the development server:
