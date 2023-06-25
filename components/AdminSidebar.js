@@ -9,7 +9,7 @@ export default function AdminSidebar() {
     { id: 1, name: 'Contest', href: '/admin/contest' },
     { id: 2, name: 'Submissions', href: '/admin/submissions' },
     { id: 3, name: 'Users', href: '/admin/users' },
-    { id: 3, name: 'Settings', href: '/admin/settings' },
+    { id: 4, name: 'Settings', href: '/admin/settings' },
   ];
 
   return (
