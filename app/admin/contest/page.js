@@ -1,10 +1,11 @@
+import AdminContest from "@/components/AdminContest";
 import PlusTabs from "@/components/PlusTabs";
 
 export default async function Contest() {
   const tabs = [
     {
       id: 0,
-      content: '<div>test1</div>'
+      content: <AdminContest />
     },
     {
       id: 1,
@@ -13,8 +14,6 @@ export default async function Contest() {
   ]
 
   return (
-    <div>
-      <PlusTabs previousTabs={tabs} />
-    </div>
+    <PlusTabs previousTabs={tabs} />
   );
 }
