@@ -22,6 +22,9 @@ input {
 	@apply text-lg font-normal w-1/4 py-4 border-2 border-x-0 border-indigo-700 focus:border-indigo-700/50 focus:outline-none;
 }
 
+.editor {
+	@apply text-lg font-normal w-3/4 py-4 border-2 border-x-0 border-indigo-700 focus-within:border-indigo-700/50 focus-within:outline-none;
+}
 /* .input-no-pb {
 	@apply w-full px-2 pt-2 border border-indigo-900/50 focus:border-indigo-900 focus:outline-none;
 } */

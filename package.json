@@ -8,6 +8,8 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@editablejs/editor": "^1.0.1",
+		"@editablejs/models": "^1.0.0",
 		"@prisma/client": "^4.16.1",
 		"autoprefixer": "10.4.14",
 		"client-only": "^0.0.1",
