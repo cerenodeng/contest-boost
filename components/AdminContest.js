@@ -6,7 +6,7 @@ export default function AdminContest() {
   return (
     <div className="flex flex-col gap-y-10">
       <AdminInput label="Tab Title" name="title" />
-      <AdminEditor />
+      <AdminEditor label="Tab Content" name="content" />
     </div>
   )
 }
