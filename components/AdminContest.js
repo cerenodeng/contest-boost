@@ -4,7 +4,7 @@ import AdminInput from "./AdminInput";
 export default function AdminContest() {
 
   return (
-    <div className="flex flex-col gap-y-10">
+    <div className="flex flex-col gap-y-12">
       <AdminInput label="Tab Title" name="title" />
       <AdminEditor label="Tab Content" name="content" />
     </div>
