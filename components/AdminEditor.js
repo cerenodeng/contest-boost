@@ -30,10 +30,12 @@ export default function AdminEditor({ label, name }) {
   return (
     <div className="flex flex-col gap-y-2">
       <label className={emptyInput ? 'invisible' : 'visible'} htmlFor={name}>{label}</label>
-      <EditableProvider editor={editor} >
-        <ToolbarComponent editor={editor} />
-        <ContentEditable name={name} placeholder={label} className="editor" />
-      </EditableProvider>
+      <div className="editor">
+        <EditableProvider editor={editor}>
+          <ToolbarComponent editor={editor} />
+          <ContentEditable name={name} placeholder={label} />
+        </EditableProvider>
+      </div>
     </div>
   );
 }
