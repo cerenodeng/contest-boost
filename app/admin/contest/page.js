@@ -7,13 +7,9 @@ export default async function Contest() {
       id: 0,
       content: <AdminContest />
     },
-    {
-      id: 1,
-      content: '<div>test2</div>'
-    }
   ]
 
   return (
-    <PlusTabs previousTabs={tabs} />
+    <PlusTabs previousTabs={tabs} template={<AdminContest />} />
   );
 }

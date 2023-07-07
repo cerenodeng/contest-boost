@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 
-export default function PlusTabs({ previousTabs }) {
+export default function PlusTabs({ previousTabs, template }) {
   const [tabs, setTabs] = useState(previousTabs);
   const [activeTab, setActiveTab] = useState(tabs[0].id);
 
   function addTab() {
     const newTab = {
       id: tabs.length,
-      content: `test ${tabs.length + 1}`
+      content: template
     };
 
     setTabs([...tabs, newTab]);
