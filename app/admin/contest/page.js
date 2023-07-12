@@ -1,4 +1,5 @@
 import AdminContest from "@/components/AdminContest";
+import AdminFooter from "@/components/AdminFooter";
 import PlusTabs from "@/components/PlusTabs";
 
 export default async function Contest() {
@@ -10,6 +11,9 @@ export default async function Contest() {
   ]
 
   return (
-    <PlusTabs previousTabs={tabs} template={<AdminContest />} />
+    <>
+      <PlusTabs previousTabs={tabs} template={<AdminContest />} />
+      <AdminFooter />
+    </>
   );
 }

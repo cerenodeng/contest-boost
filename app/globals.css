@@ -7,7 +7,7 @@ h1 {
 }
 
 .button-primary {
-	@apply text-white bg-indigo-900 px-6 py-2.5 border-2 border-transparent rounded hover:text-indigo-900 hover:bg-white hover:border-2 hover:border-indigo-900;
+	@apply flex gap-x-1.5 text-white bg-indigo-900 px-5 py-2.5 w-32 items-center justify-center border-2 border-transparent rounded hover:text-indigo-900 hover:bg-white hover:border-2 hover:border-indigo-900;
 }
 
 label {
