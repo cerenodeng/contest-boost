@@ -8,12 +8,11 @@ export default async function Contest() {
       id: 0,
       content: <AdminContest />
     },
-  ]
+  ];
 
   return (
     <>
       <PlusTabs previousTabs={tabs} template={<AdminContest />} />
-      <AdminFooter />
     </>
   );
 }

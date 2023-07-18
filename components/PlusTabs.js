@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import AdminFooter from "./AdminFooter";
 
 export default function PlusTabs({ previousTabs, template }) {
   const [tabs, setTabs] = useState(previousTabs);
@@ -43,7 +44,8 @@ export default function PlusTabs({ previousTabs, template }) {
           </div>
         ))}
       </div>
-    </div>
 
+      <AdminFooter activeTab={activeTab} />
+    </div>
   );
 }
